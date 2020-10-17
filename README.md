@@ -1,0 +1,2 @@
+# svelte_multipage_practice01
+multipaging svelte practice01
