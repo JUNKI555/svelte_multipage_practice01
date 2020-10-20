@@ -25,7 +25,9 @@ index.html loads first.js/css.<br>
 second.html loads first.js/css.<br>
 <br>
 rollup supports code splitting build.<br>
-but code splitting build does not applicable this case.
+but code splitting build does not applicable this case.<br>
+<br>
+The disadvantage of this method is that the code of the svelte framework is also split, which increases the number of binaries downloaded by the user.
 
 ## 説明(日本語)
 Svelteファイルの出力を分けるのはSvelteの責務ではなく<br>
@@ -36,6 +38,10 @@ rollup.js の構成で制御できる。詳しくは `rollup.config.js` を参�
 <br>
 rollup は code splitting build が可能だが、<br>
 今回のようなケースはブラウザ上の即時実行関数として出力したい(IIFE build)ので適用できない。
+<br>
+しかし、この手法は問題があり、svelteフレームワークとしてのコードも分割されてしまうので<br>
+ユーザーがダウンロードするバイナリもその分大きくなってしまう。<br>
+ルーティングなどを利用するほうがメリットは大きいだろう。
 
 ## reference
 - Rollup.js cheatsheet - devhints.io
